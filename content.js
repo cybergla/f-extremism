@@ -23,53 +23,53 @@ function extractFacebookUrl(u) {
     return decodeURIComponent(u);
 }
 
-setInterval(function() {
-// Runs every second
-	var test = document.getElementsByClassName('_4-u2 mbm _5v3q _4-u8');
+// setInterval(function() {
+// // Runs every second
+// 	var test = document.getElementsByClassName('_4-u2 mbm _5v3q _4-u8');
 
-	for(var i=0; i<test.length; i++) {
+// 	for(var i=0; i<test.length; i++) {
 
-		var data = test[i];
+// 		var data = test[i];
 
-		// Check if feed needs to be modified
+// 		// Check if feed needs to be modified
 
-		if(!feeds.has(data)) {
-			feeds.add(data);
+// 		if(!feeds.has(data)) {
+// 			feeds.add(data);
 
-			// Send server requests
+// 			// Send server requests
 
-			var processed = false;
+// 			var processed = false;
 
-			var linked = test[i].querySelector('._6ks');
-			if(!processed && linked != null && linked.querySelector('a') != null) {
-				processed = true;
-                linked.innerHTML = linked.innerHTML + "<p style='"+style+"'> FAKE NEWS </p>";
-                // var URL = extractFacebookUrl(linked.querySelector('a').href);
-                // console.log("FEXTREMISM: Got url1 "+URL);
-                // chrome.runtime.sendMessage({url:URL},null);
-                // // sendPostRequest(serverURL,{"url":url}, function(){
-                // //     linked.innerHTML = linked.innerHTML + "<p style='"+style+"'> FAKE NEWS </p>";
-                // // }, function(){
-                // //     console.log("ERROR: in request");
-                // // })
-			}
+// 			var linked = test[i].querySelector('._6ks');
+// 			if(!processed && linked != null && linked.querySelector('a') != null) {
+// 				processed = true;
+//                 linked.innerHTML = linked.innerHTML + "<p style='"+style+"'> FAKE NEWS </p>";
+//                 // var URL = extractFacebookUrl(linked.querySelector('a').href);
+//                 // console.log("FEXTREMISM: Got url1 "+URL);
+//                 // chrome.runtime.sendMessage({url:URL},null);
+//                 // // sendPostRequest(serverURL,{"url":url}, function(){
+//                 // //     linked.innerHTML = linked.innerHTML + "<p style='"+style+"'> FAKE NEWS </p>";
+//                 // // }, function(){
+//                 // //     console.log("ERROR: in request");
+//                 // // })
+// 			}
 
 
-			var link = test[i].querySelector('._5pbx.userContent');
-			if(!processed && link != null && link.querySelector('a') != null && link.querySelector('a').href != null && link.querySelector('a').href != undefined) {
-				processed = true;
-                link.innerHTML = link.innerHTML + "<p style='"+style+"'> FAKE NEWS </p>"
-                // var URL = extractFacebookUrl(link.href);
-                // console.log("FEXTREMISM: Got url2 "+URL);
-                // chrome.runtime.sendMessage({url:URL},null);
-                // // sendPostRequest(serverURL,{"url":url}, function(){
-                // //     link.innerHTML = link.innerHTML + "<p style='"+style+"'> FAKE NEWS </p>"
-                // // }, function(){
-                // //     console.log("ERROR: in request");
-                // // })
-			}
+// 			var link = test[i].querySelector('._5pbx.userContent');
+// 			if(!processed && link != null && link.querySelector('a') != null && link.querySelector('a').href != null && link.querySelector('a').href != undefined) {
+// 				processed = true;
+//                 link.innerHTML = link.innerHTML + "<p style='"+style+"'> FAKE NEWS </p>"
+//                 // var URL = extractFacebookUrl(link.href);
+//                 // console.log("FEXTREMISM: Got url2 "+URL);
+//                 // chrome.runtime.sendMessage({url:URL},null);
+//                 // // sendPostRequest(serverURL,{"url":url}, function(){
+//                 // //     link.innerHTML = link.innerHTML + "<p style='"+style+"'> FAKE NEWS </p>"
+//                 // // }, function(){
+//                 // //     console.log("ERROR: in request");
+//                 // // })
+// 			}
 
-		}
-	}
+// 		}
+// 	}
 
-}, 1000);
+// }, 1000);
